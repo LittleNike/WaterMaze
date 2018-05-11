@@ -329,7 +329,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -528,18 +528,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af87afe0ad6329740bdb0911ad8afc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  Health: 100
   Speed: 3
   RotationSpeed: 3
   ShootCooldown: 0.5
-  speedboostTimer: 0
-  noReloadTimer: 0
+  SpeedboostTimer: 0
+  NoReloadTimer: 0
   BulletPrefab: {fileID: 50247274752881782, guid: fd828133b025e5c448ccd5a55650b9be,
     type: 2}
   Bulletspeed: 10
-  bulletSpawnRight: {fileID: 4432955958370832}
-  bulletSpawnLeft: {fileID: 4092986954191456}
-  HealthSlider: {fileID: 114123652992223542}
+  BulletSpawnRight: {fileID: 0}
+  BulletSpawnLeft: {fileID: 0}
+  Top: 0
+  Left: 0
+  Down: 0
+  Right: 0
+  LeftCannon: 0
+  RightCannon: 0
+  Fill: {fileID: 0}
 --- !u!212 &212051145478216484
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -553,6 +559,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -597,6 +604,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -623,7 +631,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -641,6 +649,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
