@@ -1,11 +1,191 @@
 fileFormatVersion: 2
 guid: eed649483edda7f439f0a3b099f0cb18
-timeCreated: 1525690742
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: sprite_submarine_0
+    21300002: sprite_submarine_1
+    21300004: sprite_submarine_2
+    21300006: sprite_submarine_3
+    21300008: sprite_submarine_4
+    21300010: sprite_submarine_5
+    21300012: sprite_submarine_6
+    21300014: sprite_submarine_7
+    21300016: sprite_submarine_8
+    21300018: sprite_submarine_9
+    21300020: sprite_submarine_10
+    21300022: sprite_submarine_11
+    21300024: sprite_submarine_12
+    21300026: sprite_submarine_13
+    21300028: sprite_submarine_14
+    21300030: sprite_submarine_15
+    21300032: sprite_submarine_16
+    21300034: sprite_submarine_17
+    21300036: sprite_submarine_18
+    21300038: sprite_submarine_19
+    21300040: sprite_submarine_20
+    21300042: sprite_submarine_21
+    21300044: sprite_submarine_22
+    21300046: sprite_submarine_23
+    21300048: sprite_submarine_24
+    21300050: sprite_submarine_25
+    21300052: sprite_submarine_26
+    21300054: sprite_submarine_27
+    21300056: sprite_submarine_28
+    21300058: sprite_submarine_29
+    21300060: sprite_submarine_30
+    21300062: sprite_submarine_31
+    21300064: sprite_submarine_32
+    21300066: sprite_submarine_33
+    21300068: sprite_submarine_34
+    21300070: sprite_submarine_35
+    21300072: sprite_submarine_36
+    21300074: sprite_submarine_37
+    21300076: sprite_submarine_38
+    21300078: sprite_submarine_39
+    21300080: sprite_submarine_40
+    21300082: sprite_submarine_41
+    21300084: sprite_submarine_42
+    21300086: sprite_submarine_43
+    21300088: sprite_submarine_44
+    21300090: sprite_submarine_45
+    21300092: sprite_submarine_46
+    21300094: sprite_submarine_47
+    21300096: sprite_submarine_48
+    21300098: sprite_submarine_49
+    21300100: sprite_submarine_50
+    21300102: sprite_submarine_51
+    21300104: sprite_submarine_52
+    21300106: sprite_submarine_53
+    21300108: sprite_submarine_54
+    21300110: sprite_submarine_55
+    21300112: sprite_submarine_56
+    21300114: sprite_submarine_57
+    21300116: sprite_submarine_58
+    21300118: sprite_submarine_59
+    21300120: sprite_submarine_60
+    21300122: sprite_submarine_61
+    21300124: sprite_submarine_62
+    21300126: sprite_submarine_63
+    21300128: sprite_submarine_64
+    21300130: sprite_submarine_65
+    21300132: sprite_submarine_66
+    21300134: sprite_submarine_67
+    21300136: sprite_submarine_68
+    21300138: sprite_submarine_69
+    21300140: sprite_submarine_70
+    21300142: sprite_submarine_71
+    21300144: sprite_submarine_72
+    21300146: sprite_submarine_73
+    21300148: sprite_submarine_74
+    21300150: sprite_submarine_75
+    21300152: sprite_submarine_76
+    21300154: sprite_submarine_77
+    21300156: sprite_submarine_78
+    21300158: sprite_submarine_79
+    21300160: sprite_submarine_80
+    21300162: sprite_submarine_81
+    21300164: sprite_submarine_82
+    21300166: sprite_submarine_83
+    21300168: sprite_submarine_84
+    21300170: sprite_submarine_85
+    21300172: sprite_submarine_86
+    21300174: sprite_submarine_87
+    21300176: sprite_submarine_88
+    21300178: sprite_submarine_89
+    21300180: sprite_submarine_90
+    21300182: sprite_submarine_91
+    21300184: sprite_submarine_92
+    21300186: sprite_submarine_93
+    21300188: sprite_submarine_94
+    21300190: sprite_submarine_95
+    21300192: sprite_submarine_96
+    21300194: sprite_submarine_97
+    21300196: sprite_submarine_98
+    21300198: sprite_submarine_99
+    21300200: sprite_submarine_100
+    21300202: sprite_submarine_101
+    21300204: sprite_submarine_102
+    21300206: sprite_submarine_103
+    21300208: sprite_submarine_104
+    21300210: sprite_submarine_105
+    21300212: sprite_submarine_106
+    21300214: sprite_submarine_107
+    21300216: sprite_submarine_108
+    21300218: sprite_submarine_109
+    21300220: sprite_submarine_110
+    21300222: sprite_submarine_111
+    21300224: sprite_submarine_112
+    21300226: sprite_submarine_113
+    21300228: sprite_submarine_114
+    21300230: sprite_submarine_115
+    21300232: sprite_submarine_116
+    21300234: sprite_submarine_117
+    21300236: sprite_submarine_118
+    21300238: sprite_submarine_119
+    21300240: sprite_submarine_120
+    21300242: sprite_submarine_121
+    21300244: sprite_submarine_122
+    21300246: sprite_submarine_123
+    21300248: sprite_submarine_124
+    21300250: sprite_submarine_125
+    21300252: sprite_submarine_126
+    21300254: sprite_submarine_127
+    21300256: sprite_submarine_128
+    21300258: sprite_submarine_129
+    21300260: sprite_submarine_130
+    21300262: sprite_submarine_131
+    21300264: sprite_submarine_132
+    21300266: sprite_submarine_133
+    21300268: sprite_submarine_134
+    21300270: sprite_submarine_135
+    21300272: sprite_submarine_136
+    21300274: sprite_submarine_137
+    21300276: sprite_submarine_138
+    21300278: sprite_submarine_139
+    21300280: sprite_submarine_140
+    21300282: sprite_submarine_141
+    21300284: sprite_submarine_142
+    21300286: sprite_submarine_143
+    21300288: sprite_submarine_144
+    21300290: sprite_submarine_145
+    21300292: sprite_submarine_146
+    21300294: sprite_submarine_147
+    21300296: sprite_submarine_148
+    21300298: sprite_submarine_149
+    21300300: sprite_submarine_150
+    21300302: sprite_submarine_151
+    21300304: sprite_submarine_152
+    21300306: sprite_submarine_153
+    21300308: sprite_submarine_154
+    21300310: sprite_submarine_155
+    21300312: sprite_submarine_156
+    21300314: sprite_submarine_157
+    21300316: sprite_submarine_158
+    21300318: sprite_submarine_159
+    21300320: sprite_submarine_160
+    21300322: sprite_submarine_161
+    21300324: sprite_submarine_162
+    21300326: sprite_submarine_163
+    21300328: sprite_submarine_164
+    21300330: sprite_submarine_165
+    21300332: sprite_submarine_166
+    21300334: sprite_submarine_167
+    21300336: sprite_submarine_168
+    21300338: sprite_submarine_169
+    21300340: sprite_submarine_170
+    21300342: sprite_submarine_171
+    21300344: sprite_submarine_172
+    21300346: sprite_submarine_173
+    21300348: sprite_submarine_174
+    21300350: sprite_submarine_175
+    21300352: sprite_submarine_176
+    21300354: sprite_submarine_177
+    21300356: sprite_submarine_178
+    21300358: sprite_submarine_179
+    21300360: sprite_submarine_180
+    21300362: sprite_submarine_181
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -40,7 +220,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,11 +233,24 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -69,9 +262,35 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprite_submarine_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 17
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8563adc52ac9f4ca3d814837c849a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 3c7c7095c7c1998448de438e40396c9c
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
