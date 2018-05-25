@@ -8,23 +8,19 @@ public class PlayerBehavior : MonoBehaviour {
     public int Health = 100;
     public float Speed = 3;
     public float RotationSpeed = 3;
-    //public float bulletspeed = 10;
     public float ShootCooldown = 0.5f;
 
     public float SpeedboostTimer;
     public float NoReloadTimer;
     
-    public Rigidbody2D BulletPrefab;
-    public float Bulletspeed = 10;
-    public Transform BulletSpawnRight;
-    public Transform BulletSpawnLeft;
+    public GameObject BulletPrefab;
+    public Transform BulletSpawn;
 
     public KeyCode Top;
     public KeyCode Left;
     public KeyCode Down;
     public KeyCode Right;
-    public KeyCode LeftCannon;
-    public KeyCode RightCannon;
+    public KeyCode Cannon;
 
     public Image Fill;
 
@@ -32,13 +28,13 @@ public class PlayerBehavior : MonoBehaviour {
     private float _timeStamp;
     private Slider _healthSlider;
 
-    //private BulletBehavior shootingScript;
+    private BulletInfo shootingScript;
 
 	// Use this for initialization
 	void Start () {
         _rb = GetComponent<Rigidbody2D>();
         _healthSlider = GetComponentInChildren<Slider>();
-        //shootingScript = gameObject.AddComponent<BulletBehavior>();
+        shootingScript = gameObject.AddComponent<BulletInfo>();
 	}
 
     void FixedUpdate()
@@ -59,14 +55,9 @@ public class PlayerBehavior : MonoBehaviour {
         {
             _rb.AddTorque(-RotationSpeed);
         }
-
-        if (Input.GetKeyDown(LeftCannon))
+        if (Input.GetKeyDown(Cannon))
         {
-            Fire('l');
-        }
-        if (Input.GetKeyDown(RightCannon))
-        {
-            Fire('r');
+            Fire();
         }
     }
 
@@ -75,9 +66,7 @@ public class PlayerBehavior : MonoBehaviour {
         switch (other.gameObject.tag)
         {
             case "Bullet":
-                Health -= 10;
-                _healthSlider.value = Health;
-                Fill.color = Color.Lerp(Color.red, Color.green, 1);
+                IsHit();
                 break;
             case "Speedboost":
                 Speed = 6;
@@ -99,7 +88,7 @@ public class PlayerBehavior : MonoBehaviour {
     {
         if (Health <= 0)
         {
-            Destroy(gameObject, 0.0f);
+            Destroy(gameObject);
         }
 
         if(SpeedboostTimer > 0)
@@ -121,28 +110,23 @@ public class PlayerBehavior : MonoBehaviour {
         }
 	}
 
-    void Fire(char side)
+    void Fire()
     {
         if (_timeStamp <= Time.time)
         {
-            if (side == 'l')
-            {
-                Vector2 bulletSpawnPositionLeft = new Vector2(BulletSpawnLeft.position.x, BulletSpawnLeft.position.y);
-                Rigidbody2D cloneLeft;
-                cloneLeft = Instantiate(BulletPrefab, bulletSpawnPositionLeft, transform.rotation);
-                cloneLeft.velocity = transform.up * Bulletspeed; //shootingScript.GetBulletspeed();
-
-                //shootingScript.Shoots(bulletSpawnLeft);
-            }
-
-            if (side == 'r')
-            {
-                Vector2 bulletSpawnPositionRight = new Vector2(BulletSpawnRight.position.x, BulletSpawnRight.position.y);
-                Rigidbody2D cloneRight;
-                cloneRight = Instantiate(BulletPrefab, bulletSpawnPositionRight, transform.rotation);
-                cloneRight.velocity = transform.up * Bulletspeed;
-            }
+            Vector2 bulletspawnPosition = new Vector2(BulletSpawn.position.x, BulletSpawn.position.y);
+            GameObject clone;
+            clone = Instantiate(BulletPrefab, bulletspawnPosition, transform.rotation);
+            clone.GetComponentInChildren<Rigidbody2D>().velocity = transform.up * shootingScript.GetBulletspeed();
+            clone.layer = gameObject.layer;
             _timeStamp = Time.time + ShootCooldown;
         }
+    }
+
+    void IsHit()
+    {
+        Health -= (int)shootingScript.GetBulletDamage();
+        _healthSlider.value = Health;
+        //Fill.color = Color.Lerp(Color.red, Color.green, 1);
     }
 }
