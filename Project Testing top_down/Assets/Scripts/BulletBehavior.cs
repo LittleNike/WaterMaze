@@ -22,6 +22,9 @@ public class BulletBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.layer == 8 || other.gameObject.layer == 9 || other.gameObject.layer == 10)
+        {
+            Destroy(gameObject);
+        }
     }
 }

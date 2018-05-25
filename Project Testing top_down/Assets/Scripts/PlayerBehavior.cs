@@ -59,6 +59,7 @@ public class PlayerBehavior : MonoBehaviour {
         {
             Fire();
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
