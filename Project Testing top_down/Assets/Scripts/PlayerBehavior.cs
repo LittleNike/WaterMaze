@@ -7,8 +7,10 @@ public class PlayerBehavior : MonoBehaviour {
 
     public int Health = 100;
     public float Speed = 3;
-    public float RotationSpeed = 3;
+    public float RotationSpeed = 10;
     public float ShootCooldown = 0.5f;
+
+    public bool IsControler;
 
     public float SpeedboostTimer;
     public float NoReloadTimer;
@@ -28,36 +30,53 @@ public class PlayerBehavior : MonoBehaviour {
     private float _timeStamp;
     private Slider _healthSlider;
 
-    private BulletInfo shootingScript;
+    private BulletInfo _shootingScript;
 
 	// Use this for initialization
 	void Start () {
         _rb = GetComponent<Rigidbody2D>();
         _healthSlider = GetComponentInChildren<Slider>();
-        shootingScript = gameObject.AddComponent<BulletInfo>();
+        _shootingScript = gameObject.AddComponent<BulletInfo>();
+        if(IsControler)
+        {
+            RotationSpeed = 1.5f;
+        }
 	}
 
     void FixedUpdate()
     {
-        if (Input.GetKey(Top))
+        if (IsControler)
         {
-            _rb.AddForce(transform.up * Speed);
+            _rb.AddForce(new Vector2(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical")) * Speed);
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+            float angle = Mathf.Atan2(-h, -v) * Mathf.Rad2Deg;
+            Quaternion newDir = Quaternion.identity;
+            newDir.eulerAngles = new Vector3(0, 0, angle);
+            transform.rotation = Quaternion.Slerp(transform.rotation, newDir, Time.deltaTime * RotationSpeed);
         }
-        if (Input.GetKey(Left))
-        {
-            _rb.AddTorque(RotationSpeed);
-        }
-        if (Input.GetKey(Down))
-        {
-            _rb.AddForce(-transform.up * Speed / 2);
-        }
-        if (Input.GetKey(Right))
-        {
-            _rb.AddTorque(-RotationSpeed);
-        }
-        if (Input.GetKeyDown(Cannon))
-        {
-            Fire();
+        else
+        { 
+            if (Input.GetKey(Top))
+            {
+                _rb.AddForce(transform.up * Speed);
+            }
+            if (Input.GetKey(Left))
+            {
+                _rb.AddTorque(RotationSpeed);
+            }
+            if (Input.GetKey(Down))
+            {
+                _rb.AddForce(-transform.up * Speed / 2);
+            }
+            if (Input.GetKey(Right))
+            {
+                _rb.AddTorque(-RotationSpeed);
+            }
+            if (Input.GetKeyDown(Cannon))
+            {
+                Fire();
+            }
         }
 
     }
@@ -118,7 +137,7 @@ public class PlayerBehavior : MonoBehaviour {
             Vector2 bulletspawnPosition = new Vector2(BulletSpawn.position.x, BulletSpawn.position.y);
             GameObject clone;
             clone = Instantiate(BulletPrefab, bulletspawnPosition, transform.rotation);
-            clone.GetComponentInChildren<Rigidbody2D>().velocity = transform.up * shootingScript.GetBulletspeed();
+            clone.GetComponentInChildren<Rigidbody2D>().velocity = transform.up * _shootingScript.GetBulletspeed();
             clone.layer = gameObject.layer;
             _timeStamp = Time.time + ShootCooldown;
         }
@@ -126,7 +145,7 @@ public class PlayerBehavior : MonoBehaviour {
 
     void IsHit()
     {
-        Health -= (int)shootingScript.GetBulletDamage();
+        Health -= (int)_shootingScript.GetBulletDamage();
         _healthSlider.value = Health;
         //Fill.color = Color.Lerp(Color.red, Color.green, 1);
     }
