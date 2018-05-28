@@ -23,6 +23,7 @@ public class PlayerBehavior : MonoBehaviour {
     public KeyCode Down;
     public KeyCode Right;
     public KeyCode Cannon;
+    public KeyCode Use;
 
     public Image Fill;
 
@@ -76,6 +77,10 @@ public class PlayerBehavior : MonoBehaviour {
             if (Input.GetKeyDown(Cannon))
             {
                 Fire();
+            }
+            if(Input.GetKeyDown(Use))
+            {
+                Debug.Log("Using...");
             }
         }
 
