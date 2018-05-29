@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224644626176397970}
   - component: {fileID: 114781116740936886}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4442977765179872}
   - component: {fileID: 50235640423849758}
   - component: {fileID: 114815380020449552}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4214520601095906}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4811318165955174}
   - component: {fileID: 212460765612131704}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 224463437945996354}
   - component: {fileID: 222632106706907892}
   - component: {fileID: 114351784996767492}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 224453640108439070}
   - component: {fileID: 222525807513317136}
   - component: {fileID: 114100617673025956}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 114299869625896196}
   - component: {fileID: 114753779847378136}
   - component: {fileID: 225467206530187894}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: HUD Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 224731076003351670}
   - component: {fileID: 222216004200381732}
   - component: {fileID: 114830416595824598}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Player Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224319176915511010}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 4971811883566848}
   - component: {fileID: 212770670451403894}
   - component: {fileID: 60699665062850432}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Player Model
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398919216978824}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -12, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4971811883566848}
@@ -269,7 +269,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -277,54 +277,54 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.34, y: -0.42999998}
-      - {x: 0.37, y: -0.44}
-      - {x: 0.42999998, y: -0.38}
-      - {x: 0.5, y: -0.13}
-      - {x: 0.53999996, y: 0}
-      - {x: 0.58, y: 0.089999996}
-      - {x: 0.58, y: 0.28}
-      - {x: 0.35999998, y: 0.45999998}
-      - {x: 0.35, y: 0.61}
-      - {x: 0.31, y: 0.63}
-      - {x: 0.29999998, y: 0.88}
-      - {x: 0.28, y: 0.9}
-      - {x: 0.26999998, y: 0.96999997}
-      - {x: 0.22999999, y: 1.05}
-      - {x: 0.13, y: 1.14}
-      - {x: 0.099999994, y: 1.22}
-      - {x: 0.08, y: 1.24}
-      - {x: -0.12, y: 1.24}
-      - {x: -0.14, y: 1.22}
-      - {x: -0.22999999, y: 1.09}
-      - {x: -0.29999998, y: 0.96999997}
-      - {x: -0.34, y: 0.88}
-      - {x: -0.38, y: 0.62}
-      - {x: -0.42, y: 0.47}
-      - {x: -0.47, y: 0.41}
-      - {x: -0.62, y: 0.24}
-      - {x: -0.62, y: 0.11}
-      - {x: -0.59, y: 0.089999996}
-      - {x: -0.59, y: -0.01}
-      - {x: -0.55, y: -0.03}
-      - {x: -0.55, y: -0.14}
-      - {x: -0.51, y: -0.16}
-      - {x: -0.51, y: -0.26}
-      - {x: -0.47, y: -0.28}
-      - {x: -0.45999998, y: -0.37}
-      - {x: -0.42999998, y: -0.42}
-      - {x: -0.39, y: -0.44}
-      - {x: -0.39, y: -0.69}
-      - {x: -0.35, y: -0.71}
-      - {x: -0.35, y: -0.84999996}
-      - {x: -0.26999998, y: -1.01}
-      - {x: -0.24, y: -1.04}
-      - {x: -0.19999999, y: -1.14}
-      - {x: -0.14, y: -1.18}
-      - {x: 0.089999996, y: -1.18}
-      - {x: 0.17, y: -1.11}
-      - {x: 0.29999998, y: -0.84}
-      - {x: 0.34, y: -0.68}
+    - - {x: 0.265625, y: -0.3359375}
+      - {x: 0.2890625, y: -0.34375}
+      - {x: 0.3359375, y: -0.296875}
+      - {x: 0.390625, y: -0.1015625}
+      - {x: 0.421875, y: 0}
+      - {x: 0.453125, y: 0.0703125}
+      - {x: 0.453125, y: 0.21875}
+      - {x: 0.28125, y: 0.359375}
+      - {x: 0.2734375, y: 0.4765625}
+      - {x: 0.2421875, y: 0.4921875}
+      - {x: 0.234375, y: 0.6875}
+      - {x: 0.21875, y: 0.703125}
+      - {x: 0.2109375, y: 0.7578125}
+      - {x: 0.1796875, y: 0.8203125}
+      - {x: 0.1015625, y: 0.890625}
+      - {x: 0.078125, y: 0.953125}
+      - {x: 0.0625, y: 0.96875}
+      - {x: -0.09375, y: 0.96875}
+      - {x: -0.109375, y: 0.953125}
+      - {x: -0.1796875, y: 0.8515625}
+      - {x: -0.234375, y: 0.7578125}
+      - {x: -0.265625, y: 0.6875}
+      - {x: -0.296875, y: 0.484375}
+      - {x: -0.328125, y: 0.3671875}
+      - {x: -0.3671875, y: 0.3203125}
+      - {x: -0.484375, y: 0.1875}
+      - {x: -0.484375, y: 0.0859375}
+      - {x: -0.4609375, y: 0.0703125}
+      - {x: -0.4609375, y: -0.0078125}
+      - {x: -0.4296875, y: -0.0234375}
+      - {x: -0.4296875, y: -0.109375}
+      - {x: -0.3984375, y: -0.125}
+      - {x: -0.3984375, y: -0.203125}
+      - {x: -0.3671875, y: -0.21875}
+      - {x: -0.359375, y: -0.2890625}
+      - {x: -0.3359375, y: -0.328125}
+      - {x: -0.3046875, y: -0.34375}
+      - {x: -0.3046875, y: -0.5390625}
+      - {x: -0.2734375, y: -0.5546875}
+      - {x: -0.2734375, y: -0.6640625}
+      - {x: -0.2109375, y: -0.7890625}
+      - {x: -0.1875, y: -0.8125}
+      - {x: -0.15625, y: -0.890625}
+      - {x: -0.109375, y: -0.921875}
+      - {x: 0.0703125, y: -0.921875}
+      - {x: 0.1328125, y: -0.8671875}
+      - {x: 0.234375, y: -0.65625}
+      - {x: 0.265625, y: -0.53125}
 --- !u!114 &114100617673025956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -479,19 +479,18 @@ MonoBehaviour:
   Speed: 3
   RotationSpeed: 10
   ShootCooldown: 0.5
+  IsControler: 1
   SpeedboostTimer: 0
   NoReloadTimer: 0
   BulletPrefab: {fileID: 1306007985960944, guid: fd828133b025e5c448ccd5a55650b9be,
     type: 2}
-  Bulletspeed: 10
-  BulletSpawnRight: {fileID: 0}
-  BulletSpawnLeft: {fileID: 0}
+  BulletSpawn: {fileID: 4214520601095906}
   Top: 119
   Left: 97
   Down: 115
   Right: 100
-  LeftCannon: 0
-  RightCannon: 0
+  Cannon: 103
+  Use: 102
   Fill: {fileID: 0}
 --- !u!114 &114830416595824598
 MonoBehaviour:
@@ -561,7 +560,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 520897921
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 707987aabf2482043be37198bbdfb6b4, type: 3}
   m_Color: {r: 0, g: 1, b: 0.33793092, a: 1}
@@ -571,7 +570,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212770670451403894
 SpriteRenderer:
@@ -606,7 +605,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 520897921
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 73a752006b3cd0241a18f06d4892a932, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -726,11 +725,11 @@ RectTransform:
   m_Father: {fileID: 224808495160729490}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 273.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20, y: 0}
   m_SizeDelta: {x: 400, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!224 &224731076003351670
 RectTransform:
   m_ObjectHideFlags: 1
