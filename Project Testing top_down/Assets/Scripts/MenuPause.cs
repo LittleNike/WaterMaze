@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPause : MonoBehaviour {
 
@@ -9,6 +10,16 @@ public class MenuPause : MonoBehaviour {
     public static bool GameIsPaused = false;
 
     public GameObject PauseMenuUI;
+
+    public Button BtnResume;
+    public Button BtnOptions;
+    public Button BtnMenu;
+    public Button BtnQuit;
+
+    public void Start()
+    {
+    }
+
 
 	// Update is called once per frame
 	void Update () {
@@ -24,7 +35,6 @@ public class MenuPause : MonoBehaviour {
                 Pause();
             }
         }
-
 	}
 
     //add to sources https://www.youtube.com/watch?v=JivuXdrIHK0
@@ -38,6 +48,7 @@ public class MenuPause : MonoBehaviour {
 
     void Pause()
     {
+        BtnResume.OnSelect(null);
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

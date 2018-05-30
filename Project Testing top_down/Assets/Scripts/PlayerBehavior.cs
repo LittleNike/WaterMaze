@@ -48,13 +48,18 @@ public class PlayerBehavior : MonoBehaviour {
     {
         if (IsControler)
         {
-            _rb.AddForce(new Vector2(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical")) * Speed);
+            _rb.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Speed);
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
-            float angle = Mathf.Atan2(-h, -v) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(-h, v) * Mathf.Rad2Deg;
             Quaternion newDir = Quaternion.identity;
             newDir.eulerAngles = new Vector3(0, 0, angle);
             transform.rotation = Quaternion.Slerp(transform.rotation, newDir, Time.deltaTime * RotationSpeed);
+
+            if(Input.GetKeyDown("joystick button 0"))
+            {
+                Fire();
+            }
         }
         else
         { 
@@ -66,10 +71,10 @@ public class PlayerBehavior : MonoBehaviour {
             {
                 _rb.AddTorque(RotationSpeed);
             }
-            if (Input.GetKey(Down))
-            {
-                _rb.AddForce(-transform.up * Speed / 2);
-            }
+            //if (Input.GetKey(Down))
+            //{
+            //    _rb.AddForce(-transform.up * Speed / 2);
+            //}
             if (Input.GetKey(Right))
             {
                 _rb.AddTorque(-RotationSpeed);

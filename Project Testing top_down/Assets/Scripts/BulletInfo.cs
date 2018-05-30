@@ -8,7 +8,7 @@ public class BulletInfo : MonoBehaviour {
     private float _bulletspeed = 10;
     private float _bulletdamage = 10;
     private float _lifetime = 2;
-    public bool BounceOff;
+    private bool _bounceOff;
 
     // Use this for initialization
     void Start () {
@@ -33,5 +33,9 @@ public class BulletInfo : MonoBehaviour {
     public float GetLifetime()
     {
         return _lifetime;
+    }
+    public bool GetBounceOff()
+    {
+        return _bounceOff;
     }
 }
